@@ -1,0 +1,31 @@
+<html>
+    <head>
+        <title> Control panel Robot </title>
+        <link rel="stylesheet" href="{{ url_for('static',filename='styles/sty.css')}}">
+
+    </head>
+    <body>
+<h1> Control panel for robot </h1>
+<div class="container">
+<button class="btn btn1"><a href = "/forward/">forward</a></button> 
+<button class="btn btn1"><a href = "/backward/">backward</a></button> 
+<button class="btn btn1"><a href = "/stop/">stop</a></button> 
+<button class="btn btn1"><a href = "/left/">left</a></button> 
+<button class="btn btn1"><a href = "/right/">right</a></button> 
+
+</div>
+<script>
+    window.watsonAssistantChatOptions = {
+        integrationID: "ee36751e-84b1-45a8-ab94-8dbc8167dd66", // The ID of this integration.
+        region: "au-syd", // The region your integration is hosted in.
+        serviceInstanceID: "11649f1a-968b-4bfc-a4b0-28361d3077dc", // The ID of your service instance.
+        onLoad: function(instance) { instance.render(); }
+      };
+    setTimeout(function(){
+      const t=document.createElement('script');
+      t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js"
+      document.head.appendChild(t);
+    });
+  </script>
+    </body>
+</html>
